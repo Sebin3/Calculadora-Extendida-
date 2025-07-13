@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
 # Importamos las funciones de nuestro archivo de lógica
-from calculator_logic import factorial, combinatoria, permutacion
+from calculadora_login import factorial, combinatoria, permutacion
 
 # --- Interfaz Gráfica con Tkinter ---
 
