@@ -63,10 +63,6 @@ def test_combinatoria_no_enteros():
 # --- NUEVOS Tests para la función permutacion ---
 
 def test_permutacion_valores_validos():
-    """
-    Criterio: Calcular permutación P(n, k) para valores válidos.
-    Este test DEBE FALLAR inicialmente (ROJO) debido a la modificación en calculator.py.
-    """
     assert permutacion(5, 2) == 20 # P(5,2) = 5! / 3! = 120 / 6 = 20
     assert permutacion(4, 2) == 12 # P(4,2) = 4! / 2! = 24 / 2 = 12
     assert permutacion(3, 3) == 6  # P(3,3) = 3! / 0! = 6 / 1 = 6  <-- ESTE ES EL QUE NOS INTERESA QUE FALLE
