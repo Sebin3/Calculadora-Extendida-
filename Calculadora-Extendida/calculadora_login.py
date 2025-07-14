@@ -46,22 +46,22 @@ def combinatoria(n, k):
         raise ValueError(f"Error al calcular combinatoria: {e}")
 
 
-def permutacion(n, k):
-    """
-    TEST
-    Calcula la permutación P(n, k).
-    Lanza ValueError si n o k no son enteros no negativos, o si k > n.
-    """
+def _validate_nk(n, k, operation_name):
+    """Función auxiliar para validar n y k para operaciones combinatorias."""
     if not isinstance(n, int) or not isinstance(k, int):
-        raise ValueError("Error: n y k deben ser números enteros para la permutación.")
+        raise ValueError(f"Error: n y k deben ser números enteros para la {operation_name}.")
     if n < 0 or k < 0:
-        raise ValueError("Error: n y k deben ser números no negativos para la permutación.")
+        raise ValueError(f"Error: n y k deben ser números no negativos para la {operation_name}.")
+
+def permutacion(n, k):
+    _validate_nk(n, k, "permutación") # Reutiliza la validación
     if k > n:
         raise ValueError("Error: Para permutación P(n, k), k no puede ser mayor que n.")
-    if k == n: 
-        return 0 
-    else:
-        return -1 
+    try:
+        return math.perm(n, k)
+    except ValueError as e:
+        
+        raise ValueError(f"Error al calcular permutación: {e}") 
 if __name__ == "__main__":
     print("Este archivo contiene la lógica matemática de la calculadora.")
     print("Para usar la interfaz gráfica, por favor, ejecuta 'python calculator_gui.py'.")
