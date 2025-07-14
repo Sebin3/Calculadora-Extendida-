@@ -48,9 +48,7 @@ def combinatoria(n, k):
 
 def permutacion(n, k):
     """
-
     TEST
-    
     Calcula la permutación P(n, k).
     Lanza ValueError si n o k no son enteros no negativos, o si k > n.
     """
