@@ -61,7 +61,6 @@ def permutacion(n, k):
     if k == n: 
         return 0 
     else:
-       
         return -1 
 if __name__ == "__main__":
     print("Este archivo contiene la lógica matemática de la calculadora.")
