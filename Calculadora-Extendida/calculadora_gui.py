@@ -122,6 +122,7 @@ class AdvancedCalculatorGUI:
             value_str = f"C({n},{k}) = {n}! / ({k}! × ({n}-{k})!)"
             self.result_var.set(f"C({n},{k}) = {result}")
             self.detail_var.set(f"{formula_str}\n{value_str} = {result}") # Mostrar fórmula y valores
+            
         except ValueError as e:
             messagebox.showerror("Error de Cálculo", str(e))
             self.result_var.set("Resultado: Error")
