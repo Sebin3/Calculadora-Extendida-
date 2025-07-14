@@ -4,7 +4,7 @@ def factorial(n, detailed=False):
     """
     Calcula el factorial de un número entero no negativo.
     Lanza ValueError si el número es negativo, no entero o excede un límite superior.
-    Si detailed es True, devuelve una cadena con el desarrollo (ej. "5x4x3x2x1").
+    Si detailed es True, devuelve una cadena con el desarrollo (ej. "5x4x3x2x1").3
     """
     if not isinstance(n, int):
         raise ValueError("Error: El factorial solo está definido para números enteros.")
