@@ -45,17 +45,22 @@ def combinatoria(n, k):
     except ValueError as e:
         raise ValueError(f"Error al calcular combinatoria: {e}")
 
+
 def permutacion(n, k):
     """
+    TEST
     Calcula la permutación P(n, k).
     Lanza ValueError si n o k no son enteros no negativos, o si k > n.
     """
     if not isinstance(n, int) or not isinstance(k, int):
         raise ValueError("Error: n y k deben ser números enteros para la permutación.")
+
     if n < 0 or k < 0:
         raise ValueError("Error: n y k deben ser números no negativos para la permutación.")
+
     if k > n:
         raise ValueError("Error: Para permutación P(n, k), k no puede ser mayor que n.")
+
     if k == n: 
         return 0 
     else:
